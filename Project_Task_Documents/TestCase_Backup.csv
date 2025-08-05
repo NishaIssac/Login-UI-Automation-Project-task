@@ -1,0 +1,25 @@
+ID,Test Case,Precondition,Test Steps,Type Of Test,Test Data ,Expected Result,Actual Result,Actual Result in Chrome,Jira Bug Link
+1,Verify the user can enter the Username with Latin letters,The webform is open and the user is on the login page,"1. Enter the login URL  http://the-internet.herokuapp.com/login
+2. Click on the Username field
+3. Enter the Username with Latin Letters  
+4. The Username field should accept the Latin letters",Positive,"""tomsmith""",Username is accepted with Latin Letters,Works as expected,PASSED,
+2,Verify the Password field uses Pasword Masking,The webform is open and the user is on the login page,"1. Enter the login URL  http://the-internet.herokuapp.com/login
+2. Click on the Password field
+3. The Password field must display bullets when the password is entered
+",Positive,"""SuperSecretPassword!""
+",The Password field must display bullets when the password is entered,Works as expected,PASSED,
+3,"Verify the user is able to click the ""Login"" button",The webform is open and the user is on the login page,"1. Enter the login URL  http://the-internet.herokuapp.com/login
+2. Enter the Username and Password
+3. Click on the ""Login"" button
+4. The user should be able to navigate to the next page",Positive,"""tomsmith""
+""SuperSecretPassword!""","Clicking ""Login"" button shouid take the user to the next page. ",Works as expected,PASSED,
+4,Verify the empty Username field displays a validation error message,The webform is open and the user is on the login page,"1. Enter the login URL  http://the-internet.herokuapp.com/login
+2. Leave the Username field empty
+3. Click ""Login"" button
+4. The ""Enter the Username"" error message should display",Negative,""" "" "," ""Enter the Username"" error message should display
+ ","The ""Your Username is invalid!"" error message is displayed",FAILED,
+5,The user cannot login with different login credentials,The webform is open and the user is on the login page,"1. Enter the login URL  http://the-internet.herokuapp.com/login
+2. Enter the Username and Password with different login credentials
+3. Click ""Login"" button
+4. ""Enter correct Username and Password"" message should display",Negative,"""tomsmith""
+""SuperSecretPassword!""","""Enter correct Username and Password"" message should display","The ""Your Username is invalid!"" error message is displayed",FAILED,

@@ -1,0 +1,6 @@
+1. The website URL is not secure; it is using an HTTP protocol and not HTTPS, making the app insecure
+2. The input fields do not have boundaries; they exceed the range
+3. When the "Login" button is clicked, it prompts the user to change the password for security reasons, but it never gives an option to change the password
+4. The Login button name must explicitly be visible, but the form shows the Login button text only when the cursor is hovered over it.
+5. When the fields are left empty and the Login button is clicked, the "Your Username is invalid!" error message appears regardless of whether it is the Username field or the Password field that is left empty/invalid
+6. The input fields are supposed to be focused, and when the cursor is hovered on the textbox, which is not happening here
